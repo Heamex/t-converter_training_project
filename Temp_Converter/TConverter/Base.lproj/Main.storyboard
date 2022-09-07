@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day" translatesAutoresizingMaskIntoConstraints="NO" id="KvN-WM-ObW">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KvN-WM-ObW" secondAttribute="height" multiplier="207:448" id="agM-VI-6my"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7iw-bd-a5C">
+                                <rect key="frame" x="172" y="365" width="70" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="fcu-Jj-GIP"/>
+                                    <constraint firstAttribute="height" constant="42" id="tmc-2W-Cd2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32ºF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4V-KY-x0b">
+                                <rect key="frame" x="172" y="489" width="70" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="9mi-Jt-CaE"/>
+                                    <constraint firstAttribute="height" constant="42" id="SWw-Di-3PH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pKL-MD-2pg">
+                                <rect key="frame" x="18" y="433" width="378" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="225" id="oU9-NK-9TX"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Xs1-Uj-ykz"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T - Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Cax-PS-yfq">
+                                <rect key="frame" x="20" y="64" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="fYn-GV-hy8"/>
+                                    <constraint firstAttribute="width" priority="999" constant="200" id="s5m-YB-V3u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7iw-bd-a5C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0MV-Ru-oBP"/>
+                            <constraint firstItem="pKL-MD-2pg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Dk-Z6-HEV"/>
+                            <constraint firstAttribute="trailing" secondItem="KvN-WM-ObW" secondAttribute="trailing" id="3yJ-dc-60H"/>
+                            <constraint firstItem="S4V-KY-x0b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5QW-5V-ssf"/>
+                            <constraint firstItem="Cax-PS-yfq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" priority="998" id="AAQ-B7-AaN"/>
+                            <constraint firstItem="Cax-PS-yfq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Ac3-7I-pY7"/>
+                            <constraint firstItem="pKL-MD-2pg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Awe-yi-6dC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pKL-MD-2pg" secondAttribute="trailing" constant="20" id="AyD-nv-jEs"/>
+                            <constraint firstAttribute="top" relation="greaterThanOrEqual" secondItem="KvN-WM-ObW" secondAttribute="top" priority="999" id="LBh-cP-nDi"/>
+                            <constraint firstItem="Cax-PS-yfq" firstAttribute="leading" secondItem="pKL-MD-2pg" secondAttribute="leading" id="QLG-71-1ME"/>
+                            <constraint firstItem="Cax-PS-yfq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WAZ-xf-B3A"/>
+                            <constraint firstItem="7iw-bd-a5C" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Cax-PS-yfq" secondAttribute="bottom" constant="20" id="nzv-5g-nfi"/>
+                            <constraint firstItem="Cax-PS-yfq" firstAttribute="trailing" secondItem="pKL-MD-2pg" secondAttribute="trailing" id="pq6-Ii-qfA"/>
+                            <constraint firstItem="KvN-WM-ObW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qOo-3K-lOm"/>
+                            <constraint firstItem="pKL-MD-2pg" firstAttribute="top" secondItem="7iw-bd-a5C" secondAttribute="bottom" constant="26" id="uGe-HA-q66"/>
+                            <constraint firstItem="KvN-WM-ObW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wO6-RP-CaD"/>
+                            <constraint firstItem="pKL-MD-2pg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wpP-fJ-mln"/>
+                            <constraint firstItem="KvN-WM-ObW" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="bottom" priority="999" id="xlF-Bb-0RY"/>
+                            <constraint firstItem="S4V-KY-x0b" firstAttribute="top" secondItem="pKL-MD-2pg" secondAttribute="bottom" constant="26" id="zus-Rv-tQn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="AAQ-B7-AaN"/>
+                                <exclude reference="QLG-71-1ME"/>
+                                <exclude reference="WAZ-xf-B3A"/>
+                                <exclude reference="pq6-Ii-qfA"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="WAZ-xf-B3A"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="AAQ-B7-AaN"/>
+                                <include reference="QLG-71-1ME"/>
+                                <include reference="pq6-Ii-qfA"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="cenliusLabel" destination="7iw-bd-a5C" id="lc9-Y0-0cK"/>
+                        <outlet property="fahrenheitLabel" destination="S4V-KY-x0b" id="YdZ-en-y6E"/>
+                        <outlet property="slider" destination="pKL-MD-2pg" id="SE0-3Z-zVd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.75" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="day" width="375" height="667"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
